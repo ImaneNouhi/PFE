@@ -32,6 +32,10 @@ public class MainTest {
          
          
          String m="HelloWorld";
+         String[] strarray= new String[3];
+         str[0]="aa";         
+         str[1]="bb";
+         str[2]="cc";
          MskLS msk= new MskLS();
          PubKeyLS pub= new PubKeyLS();
          int u=3;
@@ -39,7 +43,7 @@ public class MainTest {
          SetupReturn SetResult=new SetupReturn();
          SetResult=execute.setupLS(pub,msk,u);
          SecureKeyLS sk=new SecureKeyLS();
-         sk=execute.KeygenLS(pub, msk, args);
+         sk=execute.KeygenLS(pub, msk, strarray);
          
          System.out.println("--------------------------------");
          System.out.println(" Public key paremeters :");
