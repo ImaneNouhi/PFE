@@ -122,7 +122,7 @@ public class CPABE {
         
         sk.comps=new ArrayList<SecureCompLS>();
         int len=S.length;
-        for(int i=1;i<=len;i++){
+        for(int i=0;i<len;i++){
             
             SecureCompLS comp=new SecureCompLS();
             comp.Kx=pairing.getG1().newElement();
