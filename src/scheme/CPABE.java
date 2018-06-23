@@ -87,11 +87,14 @@ public class CPABE {
                 pub.g_hat_alpha = pairing.pairing(pub.g, msk.g_alpha);
                 pub.f = pub.g.duplicate();
                 pub.f.powZn(pub.a);
-                for(int i=1;i<u;i++){
+                      System.out.println("pub.U before = "+pub.U);
+                for(int i=0;i<u;i++){
                     pub.h.setToRandom();
-                    pub.U.set(i, pub.h);
+                    pub.U.add(i, pub.h);
                     
                 }
+                
+                System.out.println("pub.U after  = "+pub.U);
                 
 		
                 return setR;
