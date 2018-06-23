@@ -96,7 +96,8 @@ public class CPABE {
                 
                 System.out.println("pub.U after  = "+pub.U);
                 
-		
+		setR.pub=pub;
+                setR.msk=msk;
                 return setR;
         }
 
